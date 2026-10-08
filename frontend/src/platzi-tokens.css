@@ -1,0 +1,518 @@
+/* ============================================================
+   Platzi Design System · Sinapsis v1.1
+   Tokens globales generados desde design-system/ds-sinapsis-v3.html
+   NO editar a mano: regenerar con `python3 design-system/build-tokens.py`
+   Uso: <link rel="stylesheet" href="platzi-tokens.css">
+        <html data-theme="dark">  (dark | dark-medium | dark-high |
+                                    light | light-medium | light-high)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+:root{
+  --font-display:'Bricolage Grotesque',system-ui,sans-serif;
+  --font-body:'Plus Jakarta Sans',system-ui,sans-serif;
+  --font-mono:'IBM Plex Mono',ui-monospace,monospace;
+
+  /* espaciado · base-4 (el nombre es el valor) */
+  --space-0:0px;
+  --space-2:2px;
+  --space-4:4px;
+  --space-8:8px;
+  --space-12:12px;
+  --space-16:16px;
+  --space-20:20px;
+  --space-24:24px;
+  --space-32:32px;
+  --space-40:40px;
+  --space-48:48px;
+  --space-64:64px;
+  --space-80:80px;
+  --space-96:96px;
+  --space-128:128px;
+
+  /* alias semánticos: padding = alrededor del contenido · gap = entre elementos */
+  --padding-0:var(--space-0);
+  --padding-4:var(--space-4);
+  --padding-8:var(--space-8);
+  --padding-12:var(--space-12);
+  --padding-16:var(--space-16);
+  --padding-20:var(--space-20);
+  --padding-24:var(--space-24);
+  --padding-32:var(--space-32);
+  --padding-48:var(--space-48);
+  --gap-0:var(--space-0);
+  --gap-2:var(--space-2);
+  --gap-4:var(--space-4);
+  --gap-8:var(--space-8);
+  --gap-12:var(--space-12);
+  --gap-16:var(--space-16);
+  --gap-24:var(--space-24);
+  --gap-32:var(--space-32);
+  --gap-48:var(--space-48);
+
+  /* radius */
+  --radius-xs:4px;
+  --radius-sm:6px;
+  --radius-md:8px;
+  --radius-lg:10px;
+  --radius-xl:12px;
+  --radius-2xl:14px;
+  --radius-3xl:16px;
+  --radius-4xl:20px;
+  --radius-full:999px;
+}
+
+/* modo por defecto — Dark */
+:root,
+[data-theme='dark']{
+  color-scheme:dark;
+  --primary:#09E989;
+  --on-primary:#033922;
+  --primary-container:#0A492E;
+  --on-primary-container:#6DEBB4;
+  --primary-fixed:#5AFFA3;
+  --primary-fixed-dim:#00E385;
+  --on-primary-fixed:#00210F;
+  --on-primary-fixed-variant:#00522D;
+  --inverse-primary:#0A8F55;
+  --secondary:#B6CBB8;
+  --on-secondary:#233527;
+  --secondary-container:#4B6350;
+  --on-secondary-container:#C8DFCB;
+  --secondary-fixed:#A7F3BE;
+  --secondary-fixed-dim:#8CD7A3;
+  --on-secondary-fixed:#142318;
+  --on-secondary-fixed-variant:#3A5040;
+  --tertiary:#A3CDDB;
+  --on-tertiary:#10353D;
+  --tertiary-container:#2D6671;
+  --on-tertiary-container:#CAE9F2;
+  --tertiary-fixed:#C1E8FF;
+  --tertiary-fixed-dim:#7FD0F9;
+  --on-tertiary-fixed:#001E2B;
+  --on-tertiary-fixed-variant:#004D67;
+  --error:#FEB4AB;
+  --on-error:#690005;
+  --error-container:#93000A;
+  --on-error-container:#F7CDCB;
+  --surface:#121413;
+  --surface-dim:#080B0A;
+  --surface-bright:#434342;
+  --surf-cont-lowest:#1C1F1E;
+  --surf-cont-low:#212422;
+  --surf-cont:#252726;
+  --surf-cont-high:#2E3130;
+  --surf-cont-highest:#383B3A;
+  --on-surface:#DCE5E4;
+  --on-surface-variant:#BEC8C9;
+  --outline:#899394;
+  --outline-variant:#6A7475;
+  --inverse-surface:#DCE5E4;
+  --inverse-on-surface:#2B3232;
+  --scrim:#000000;
+  --shadow:#000000;
+  --warning:#F9D894;
+  --on-warning:#442E04;
+  --warning-container:#65470B;
+  --on-warning-container:#F9E4B8;
+  --success:#89E689;
+  --on-success:#0B3D0B;
+  --success-container:#174F17;
+  --on-success-container:#B6EDB6;
+  --info:#A0BAEE;
+  --on-info:#091B3E;
+  --info-container:#192E57;
+  --on-info-container:#C0D0F2;
+  --organizer:#FF833F;
+  --on-organizer:#411700;
+  --organizer-container:#883700;
+  --on-organizer-container:#FFDBCB;
+  --state-hover:color-mix(in srgb,var(--on-surface) 8%,transparent);
+  --state-focus:color-mix(in srgb,var(--on-surface) 12%,transparent);
+  --state-pressed:color-mix(in srgb,var(--on-surface) 16%,transparent);
+}
+
+/* oscuro · contraste medio — Dark Medium Contrast */
+[data-theme='dark-medium']{
+  color-scheme:dark;
+  --primary:#11F694;
+  --on-primary:#022616;
+  --primary-container:#083723;
+  --on-primary-container:#88EFC2;
+  --primary-fixed:#5AFFA3;
+  --primary-fixed-dim:#00E385;
+  --on-primary-fixed:#001208;
+  --on-primary-fixed-variant:#00381F;
+  --inverse-primary:#0A8F55;
+  --secondary:#C2D3C4;
+  --on-secondary:#1B291E;
+  --secondary-container:#425747;
+  --on-secondary-container:#DBEADD;
+  --secondary-fixed:#A7F3BE;
+  --secondary-fixed-dim:#8CD7A3;
+  --on-secondary-fixed:#0E1911;
+  --on-secondary-fixed-variant:#2F4134;
+  --tertiary:#B2D5E1;
+  --on-tertiary:#0C272D;
+  --tertiary-container:#275962;
+  --on-tertiary-container:#E3F3F8;
+  --tertiary-fixed:#C1E8FF;
+  --tertiary-fixed-dim:#7FD0F9;
+  --on-tertiary-fixed:#00131C;
+  --on-tertiary-fixed-variant:#003A4E;
+  --error:#FEC6BF;
+  --on-error:#550004;
+  --error-container:#93000A;
+  --on-error-container:#F7CDCB;
+  --surface:#121413;
+  --surface-dim:#080B0A;
+  --surface-bright:#434342;
+  --surf-cont-lowest:#1C1F1E;
+  --surf-cont-low:#212422;
+  --surf-cont:#252726;
+  --surf-cont-high:#2E3130;
+  --surf-cont-highest:#383B3A;
+  --on-surface:#EEF2F2;
+  --on-surface-variant:#A3ABAC;
+  --outline:#A4ABAC;
+  --outline-variant:#838E8F;
+  --inverse-surface:#DCE5E4;
+  --inverse-on-surface:#404746;
+  --scrim:#000000;
+  --shadow:#000000;
+  --warning:#FAE1AD;
+  --on-warning:#2B1D03;
+  --warning-container:#4E3709;
+  --on-warning-container:#FBEDD0;
+  --success:#9EEA9E;
+  --on-success:#072707;
+  --success-container:#113B11;
+  --on-success-container:#CAF2CA;
+  --info:#B5CAF2;
+  --on-info:#061128;
+  --info-container:#142343;
+  --on-info-container:#D5DFF6;
+  --organizer:#FF9C64;
+  --on-organizer:#331200;
+  --organizer-container:#883700;
+  --on-organizer-container:#FFDBCB;
+  --state-hover:color-mix(in srgb,var(--on-surface) 8%,transparent);
+  --state-focus:color-mix(in srgb,var(--on-surface) 12%,transparent);
+  --state-pressed:color-mix(in srgb,var(--on-surface) 16%,transparent);
+}
+
+/* oscuro · contraste alto — Dark High Contrast */
+[data-theme='dark-high']{
+  color-scheme:dark;
+  --primary:#24F79C;
+  --on-primary:#01120B;
+  --primary-container:#052517;
+  --on-primary-container:#ACF4D4;
+  --primary-fixed:#69FFAC;
+  --primary-fixed-dim:#00F28E;
+  --on-primary-fixed:#000000;
+  --on-primary-fixed-variant:#002917;
+  --inverse-primary:#087244;
+  --secondary:#CEDCCF;
+  --on-secondary:#131C15;
+  --secondary-container:#394C3D;
+  --on-secondary-container:#F5F9F6;
+  --secondary-fixed:#B4F5C8;
+  --secondary-fixed-dim:#97DBAC;
+  --on-secondary-fixed:#000000;
+  --on-secondary-fixed-variant:#29382D;
+  --tertiary:#C0DDE6;
+  --on-tertiary:#08191D;
+  --tertiary-container:#214C54;
+  --on-tertiary-container:#FFFFFF;
+  --tertiary-fixed:#D0EEFF;
+  --tertiary-fixed-dim:#8ED5FA;
+  --on-tertiary-fixed:#000000;
+  --on-tertiary-fixed-variant:#002E3E;
+  --error:#FED8D3;
+  --on-error:#400003;
+  --error-container:#BC000D;
+  --on-error-container:#FFFFFF;
+  --surface:#121413;
+  --surface-dim:#080B0A;
+  --surface-bright:#434342;
+  --surf-cont-lowest:#1C1F1E;
+  --surf-cont-low:#212422;
+  --surf-cont:#252726;
+  --surf-cont-high:#2E3130;
+  --surf-cont-highest:#383B3A;
+  --on-surface:#FFFFFF;
+  --on-surface-variant:#B8BEBF;
+  --outline:#BEC4C5;
+  --outline-variant:#9EA6A7;
+  --inverse-surface:#DCE5E4;
+  --inverse-on-surface:#2C3131;
+  --scrim:#000000;
+  --shadow:#000000;
+  --warning:#FCEDCF;
+  --on-warning:#181002;
+  --warning-container:#2E2005;
+  --on-warning-container:#FEFAF1;
+  --success:#BCF1BC;
+  --on-success:#031703;
+  --success-container:#092009;
+  --on-success-container:#E7F9E7;
+  --info:#D4E0F7;
+  --on-info:#030917;
+  --info-container:#0B1528;
+  --on-info-container:#F2F5FC;
+  --organizer:#FFB68E;
+  --on-organizer:#260A00;
+  --organizer-container:#A44500;
+  --on-organizer-container:#FFFFFF;
+  --state-hover:color-mix(in srgb,var(--on-surface) 8%,transparent);
+  --state-focus:color-mix(in srgb,var(--on-surface) 12%,transparent);
+  --state-pressed:color-mix(in srgb,var(--on-surface) 16%,transparent);
+}
+
+/* claro — Light */
+[data-theme='light']{
+  color-scheme:light;
+  --primary:#05854D;
+  --on-primary:#FFFFFF;
+  --primary-container:#AEF4D6;
+  --on-primary-container:#0B5133;
+  --primary-fixed:#5AFFA3;
+  --primary-fixed-dim:#00E385;
+  --on-primary-fixed:#00210F;
+  --on-primary-fixed-variant:#00522D;
+  --inverse-primary:#09E989;
+  --secondary:#4E5F52;
+  --on-secondary:#FFFFFF;
+  --secondary-container:#D8DFD9;
+  --on-secondary-container:#2E3830;
+  --secondary-fixed:#A7F3BE;
+  --secondary-fixed-dim:#8CD7A3;
+  --on-secondary-fixed:#142318;
+  --on-secondary-fixed-variant:#3A5040;
+  --tertiary:#237485;
+  --on-tertiary:#FFFFFF;
+  --tertiary-container:#C2E5F0;
+  --on-tertiary-container:#204850;
+  --tertiary-fixed:#C1E8FF;
+  --tertiary-fixed-dim:#7FD0F9;
+  --on-tertiary-fixed:#001E2B;
+  --on-tertiary-fixed-variant:#004D67;
+  --error:#BA1A1A;
+  --on-error:#FFFFFF;
+  --error-container:#FFDAD6;
+  --on-error-container:#410002;
+  --surface:#F0F5F4;
+  --surface-dim:#B7C1C0;
+  --surface-bright:#FFFFFF;
+  --surf-cont-lowest:#F8FCFB;
+  --surf-cont-low:#E7EDEC;
+  --surf-cont:#DDE4E3;
+  --surf-cont-high:#D1D9D8;
+  --surf-cont-highest:#C4CDCC;
+  --on-surface:#151E1D;
+  --on-surface-variant:#3B4A49;
+  --outline:#3C4444;
+  --outline-variant:#819C9A;
+  --inverse-surface:#29332B;
+  --inverse-on-surface:#E9F3E8;
+  --scrim:#000000;
+  --shadow:#000000;
+  --warning:#8E620B;
+  --on-warning:#FFFFFF;
+  --warning-container:#F6E8CB;
+  --on-warning-container:#533A09;
+  --success:#157915;
+  --on-success:#FFFFFF;
+  --success-container:#D1F0D1;
+  --on-success-container:#104110;
+  --info:#133986;
+  --on-info:#FFFFFF;
+  --info-container:#D0DBF1;
+  --on-info-container:#10244C;
+  --organizer:#A64A10;
+  --on-organizer:#FFFFFF;
+  --organizer-container:#FFDBCB;
+  --on-organizer-container:#411700;
+  --state-hover:color-mix(in srgb,var(--on-surface) 8%,transparent);
+  --state-focus:color-mix(in srgb,var(--on-surface) 12%,transparent);
+  --state-pressed:color-mix(in srgb,var(--on-surface) 16%,transparent);
+}
+
+/* claro · contraste medio — Light Medium Contrast */
+[data-theme='light-medium']{
+  color-scheme:light;
+  --primary:#047A46;
+  --on-primary:#FFFFFF;
+  --primary-container:#9CF2CD;
+  --on-primary-container:#073622;
+  --primary-fixed:#5AFFA3;
+  --primary-fixed-dim:#00E385;
+  --on-primary-fixed:#003016;
+  --on-primary-fixed-variant:#006C3B;
+  --inverse-primary:#09E989;
+  --secondary:#455448;
+  --on-secondary:#FFFFFF;
+  --secondary-container:#CFD8D1;
+  --on-secondary-container:#252D27;
+  --secondary-fixed:#A7F3BE;
+  --secondary-fixed-dim:#8CD7A3;
+  --on-secondary-fixed:#1A2D1F;
+  --on-secondary-fixed-variant:#455F4C;
+  --tertiary:#1F6675;
+  --on-tertiary:#FFFFFF;
+  --tertiary-container:#B2DEEC;
+  --on-tertiary-container:#17343A;
+  --tertiary-fixed:#C1E8FF;
+  --tertiary-fixed-dim:#7FD0F9;
+  --on-tertiary-fixed:#00293A;
+  --on-tertiary-fixed-variant:#006080;
+  --error:#A81717;
+  --on-error:#FFFFFF;
+  --error-container:#FFDAD6;
+  --on-error-container:#410002;
+  --surface:#F0F5F4;
+  --surface-dim:#B7C1C0;
+  --surface-bright:#FFFFFF;
+  --surf-cont-lowest:#F8FCFB;
+  --surf-cont-low:#E7EDEC;
+  --surf-cont:#DDE4E3;
+  --surf-cont-high:#D1D9D8;
+  --surf-cont-highest:#C4CDCC;
+  --on-surface:#080C0C;
+  --on-surface-variant:#2D3938;
+  --outline:#53605F;
+  --outline-variant:#9DB3B1;
+  --inverse-surface:#29332B;
+  --inverse-on-surface:#D6E9D4;
+  --scrim:#000000;
+  --shadow:#000000;
+  --warning:#775209;
+  --on-warning:#FFFFFF;
+  --warning-container:#FAF1E1;
+  --on-warning-container:#3C2A07;
+  --success:#126412;
+  --on-success:#FFFFFF;
+  --success-container:#E4F6E4;
+  --on-success-container:#0B2D0B;
+  --info:#103070;
+  --on-info:#FFFFFF;
+  --info-container:#E4EAF7;
+  --on-info-container:#0C1A37;
+  --organizer:#974008;
+  --on-organizer:#FFFFFF;
+  --organizer-container:#FFDBCB;
+  --on-organizer-container:#411700;
+  --state-hover:color-mix(in srgb,var(--on-surface) 8%,transparent);
+  --state-focus:color-mix(in srgb,var(--on-surface) 12%,transparent);
+  --state-pressed:color-mix(in srgb,var(--on-surface) 16%,transparent);
+}
+
+/* claro · contraste alto — Light High Contrast */
+[data-theme='light-high']{
+  color-scheme:light;
+  --primary:#046E3F;
+  --on-primary:#FFFFFF;
+  --primary-container:#8AEFC4;
+  --on-primary-container:#02120B;
+  --primary-fixed:#5AFFA3;
+  --primary-fixed-dim:#00E385;
+  --on-primary-fixed:#FFFFFF;
+  --on-primary-fixed-variant:#007B43;
+  --inverse-primary:#1AF698;
+  --secondary:#3C493F;
+  --on-secondary:#FFFFFF;
+  --secondary-container:#C7D1C9;
+  --on-secondary-container:#0E110E;
+  --secondary-fixed:#A7F3BE;
+  --secondary-fixed-dim:#8CD7A3;
+  --on-secondary-fixed:#FFFFFF;
+  --on-secondary-fixed-variant:#4B6853;
+  --tertiary:#1B5865;
+  --on-tertiary:#FFFFFF;
+  --tertiary-container:#A1D7E8;
+  --on-tertiary-container:#0C1A1D;
+  --tertiary-fixed:#C1E8FF;
+  --tertiary-fixed-dim:#7FD0F9;
+  --on-tertiary-fixed:#FFFFFF;
+  --on-tertiary-fixed-variant:#006C90;
+  --error:#961515;
+  --on-error:#FFFFFF;
+  --error-container:#FFB5AD;
+  --on-error-container:#000000;
+  --surface:#F0F5F4;
+  --surface-dim:#B7C1C0;
+  --surface-bright:#FFFFFF;
+  --surf-cont-lowest:#F8FCFB;
+  --surf-cont-low:#E7EDEC;
+  --surf-cont:#DDE4E3;
+  --surf-cont-high:#D1D9D8;
+  --surf-cont-highest:#C4CDCC;
+  --on-surface:#000000;
+  --on-surface-variant:#1B2222;
+  --outline:#3C4444;
+  --outline-variant:#819C9A;
+  --inverse-surface:#29332B;
+  --inverse-on-surface:#BCDBB9;
+  --scrim:#000000;
+  --shadow:#000000;
+  --warning:#553B06;
+  --on-warning:#FFFFFF;
+  --warning-container:#FFFFFF;
+  --on-warning-container:#1C1303;
+  --success:#0C450C;
+  --on-success:#FFFFFF;
+  --success-container:#FFFFFF;
+  --on-success-container:#041004;
+  --info:#0B2250;
+  --on-info:#FFFFFF;
+  --info-container:#FFFFFF;
+  --on-info-container:#050C19;
+  --organizer:#7A3100;
+  --on-organizer:#FFFFFF;
+  --organizer-container:#FFB68E;
+  --on-organizer-container:#000000;
+  --state-hover:color-mix(in srgb,var(--on-surface) 8%,transparent);
+  --state-focus:color-mix(in srgb,var(--on-surface) 12%,transparent);
+  --state-pressed:color-mix(in srgb,var(--on-surface) 16%,transparent);
+}
+
+/* Add-on colors · SOLO Growth y Visual Design — nunca en UI de producto */
+:root{
+  --addon-blue:#0AB5E9; --addon-blue-bright:#71D3F4; --addon-blue-dark:#04698B;
+  --addon-yellow:#F5D400; --addon-yellow-bright:#F8E777; --addon-yellow-dark:#998500;
+  --addon-red:#E53256; --addon-red-bright:#F17E95; --addon-red-dark:#8E0B25;
+  --addon-orange:#F55A00; --addon-orange-bright:#F7A06E; --addon-orange-dark:#8F3400;
+  --addon-green:#0E5444; --addon-green-bright:#B1FCD9; --addon-green-dark:#073123;
+
+  /* Brand shapes · colores de los assets de marca (sinapsis) */
+  --shape-coral:#F97350; --shape-green:#09E989; --shape-blue:#3C4CF4; --shape-yellow:#F5D400;
+}
+
+/* Escala tipográfica · clases utilitarias */
+.ds-display-2xl{font-family:var(--font-display);font-size:96px;line-height:112px;letter-spacing:-2px;font-weight:800}
+.ds-display-xl{font-family:var(--font-display);font-size:80px;line-height:96px;letter-spacing:-1.5px;font-weight:800}
+.ds-display-lg{font-family:var(--font-display);font-size:64px;line-height:76px;letter-spacing:-1px;font-weight:700}
+.ds-display-md{font-family:var(--font-display);font-size:48px;line-height:56px;letter-spacing:-0.5px;font-weight:700}
+.ds-display-sm{font-family:var(--font-display);font-size:40px;line-height:48px;letter-spacing:-0.25px;font-weight:700}
+.ds-headline-lg{font-family:var(--font-display);font-size:32px;line-height:40px;letter-spacing:-0.4px;font-weight:700}
+.ds-headline-md{font-family:var(--font-display);font-size:28px;line-height:36px;letter-spacing:-0.3px;font-weight:700}
+.ds-headline-sm{font-family:var(--font-display);font-size:24px;line-height:32px;letter-spacing:-0.2px;font-weight:700}
+.ds-title-lg{font-family:var(--font-display);font-size:20px;line-height:28px;letter-spacing:0px;font-weight:600}
+.ds-title-md{font-family:var(--font-display);font-size:16px;line-height:24px;letter-spacing:0.1px;font-weight:600}
+.ds-title-sm{font-family:var(--font-display);font-size:14px;line-height:20px;letter-spacing:0.1px;font-weight:600}
+.ds-body-lg{font-family:var(--font-body);font-size:20px;line-height:28px;letter-spacing:-0.1px;font-weight:400}
+.ds-body-md{font-family:var(--font-body);font-size:16px;line-height:24px;letter-spacing:0.1px;font-weight:400}
+.ds-body-sm{font-family:var(--font-body);font-size:14px;line-height:24px;letter-spacing:0.15px;font-weight:400}
+.ds-label-lg{font-family:var(--font-body);font-size:14px;line-height:20px;letter-spacing:0.1px;font-weight:600}
+.ds-label-md{font-family:var(--font-body);font-size:12px;line-height:16px;letter-spacing:0.3px;font-weight:600}
+.ds-label-sm{font-family:var(--font-body);font-size:12px;line-height:16px;letter-spacing:0.4px;font-weight:400}
+.ds-mono-md{font-family:var(--font-mono);font-size:14px;line-height:20px;letter-spacing:0.1px;font-weight:400}
+
+.ds-numeric{font-variant-numeric:tabular-nums lining-nums slashed-zero}
+
+/* Material Symbols Rounded · defaults del sistema (FILL 0 · wght 300 · opsz 20) */
+.ms{font-family:'Material Symbols Rounded';font-weight:normal;font-style:normal;display:inline-flex;align-items:center;justify-content:center;line-height:1;letter-spacing:normal;text-transform:none;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-smoothing:antialiased;font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz' 20}
+.ms.fill{font-variation-settings:'FILL' 1,'wght' 300,'GRAD' 0,'opsz' 20}
