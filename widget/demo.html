@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo del widget</title>
+    <style>
+      :root { --fondo: #f6f7f6; --texto: #1a1c1b; --tenue: #5b6464; --codigo: #e8ecea; }
+      @media (prefers-color-scheme: dark) { :root { --fondo: #121413; --texto: #e2e3e1; --tenue: #bec8c9; --codigo: #212422; } }
+      body { margin: 0; background: var(--fondo); color: var(--texto); font: 16px/1.6 system-ui, sans-serif; }
+      main { max-width: 720px; margin: 0 auto; padding: 48px 16px; }
+      code, pre { background: var(--codigo); border-radius: 8px; font-size: 14px; }
+      pre { padding: 16px; overflow-x: auto; }
+      p { color: var(--tenue); }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Widget de Platzito</h1>
+      <p>Pega esta línea antes de <code>&lt;/body&gt;</code> en tu sitio, con la clave pública del agente
+        (Agentes → tu agente → Widget). El agente debe estar publicado.</p>
+      <pre>&lt;script src="https://TU-HOST/widget.js" data-agente="pk_TU_CLAVE" async&gt;&lt;/script&gt;</pre>
+      <p>Opciones: <code>data-posicion="izquierda"</code> y <code>data-abierto="true"</code>.
+        Para probar, abre <code>/widget/demo?agente=pk_...</code> en el backend (o este archivo directo, que
+        carga el widget desde <code>http://localhost:8700</code>).</p>
+    </main>
+    <script>
+      // Demo: toma la clave de ?agente= y carga el widget desde el mismo host
+      (function () {
+        var clave = new URLSearchParams(location.search).get("agente") || "pk_TU_CLAVE";
+        var s = document.createElement("script");
+        s.src = (location.protocol === "file:" ? "http://localhost:8700" : location.origin) + "/widget.js";
+        s.async = true;
+        s.setAttribute("data-agente", clave);
+        s.setAttribute("data-abierto", "true");
+        document.body.appendChild(s);
+      })();
+    </script>
+  </body>
+</html>

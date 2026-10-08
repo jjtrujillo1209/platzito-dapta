@@ -1,0 +1,28 @@
+/* Inbox omnicanal (3 columnas) y transcripts compartidos con Llamadas. */
+.inbox { display: grid; grid-template-columns: 340px minmax(0, 1fr) 320px; height: 100vh; }
+.inbox-col { display: flex; flex-direction: column; min-height: 0; border-right: 1px solid var(--outline-variant); }
+.inbox-col:last-child { border-right: none; background: var(--surf-cont-lowest); }
+.inbox-cab { padding: var(--padding-16); border-bottom: 1px solid var(--outline-variant); display: flex; flex-direction: column; gap: var(--gap-8); }
+.inbox-cab h1 { font-size: 22px; line-height: 28px; }
+.inbox-lista { overflow-y: auto; flex: 1; }
+.inbox-item { display: flex; gap: var(--gap-12); padding: var(--padding-12) var(--padding-16); border-bottom: 1px solid var(--outline-variant); cursor: pointer; color: var(--on-surface); }
+.inbox-item:hover { background: color-mix(in srgb, var(--on-surface) 4%, transparent); text-decoration: none; }
+.inbox-item.activo { background: var(--secondary-container); color: var(--on-secondary-container); }
+.inbox-avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--surf-cont-highest); display: flex; align-items: center; justify-content: center; flex: none; position: relative; font-weight: 700; }
+.inbox-avatar .ms { position: absolute; right: -4px; bottom: -4px; font-size: 14px; background: var(--surface); border-radius: 50%; padding: 1px; }
+.inbox-noleidos { background: var(--primary); color: var(--on-primary); border-radius: var(--radius-full); font-size: 11px; font-weight: 700; min-width: 18px; height: 18px; display: inline-flex; align-items: center; justify-content: center; padding: 0 5px; }
+.inbox-hilo { flex: 1; overflow-y: auto; }
+.inbox-compositor { border-top: 1px solid var(--outline-variant); padding: var(--padding-12) var(--padding-16); display: flex; flex-direction: column; gap: var(--gap-8); }
+.inbox-compositor.nota textarea { background: var(--warning-container); color: var(--on-warning-container); }
+.inbox-compositor textarea { min-height: 60px; }
+.inbox-panel { padding: var(--padding-16); overflow-y: auto; display: flex; flex-direction: column; gap: var(--gap-16); }
+.inbox-dato { display: flex; justify-content: space-between; gap: var(--gap-8); font-size: 13px; }
+.inbox-dato > span:first-child { color: var(--on-surface-variant); }
+.inbox-filtros { display: flex; gap: var(--gap-4); flex-wrap: wrap; }
+.inbox-filtros select { width: auto; flex: 1; min-width: 0; padding: var(--padding-4) var(--padding-8); font-size: 12px; }
+.calif { display: inline-flex; gap: 2px; }
+.calif button { background: none; border: none; cursor: pointer; color: inherit; opacity: .5; padding: 0; }
+.calif button.on { opacity: 1; color: var(--primary); }
+.calif .ms { font-size: 14px; }
+@media (max-width: 1200px) { .inbox { grid-template-columns: 300px minmax(0, 1fr); } .inbox-col:last-child { display: none; } }
+@media (max-width: 900px) { .inbox { grid-template-columns: 1fr; } }
